@@ -3,7 +3,12 @@
 {% block title %}Chef index{% endblock %}
 
 {% block body %}
-    <h1>Chef index</h1>
+
+<br>
+<br>
+<br>
+<br>
+    <h1>Liste des chefs</h1>
 
     <table class="table">
         <thead>
@@ -33,17 +38,17 @@
                 <td>{{ chef.Linkedin }}</td>
                 <td>{{ chef.Instagram }}</td>
                 <td>
-                    <a href="{{ path('chef_show', {'id': chef.id}) }}">show</a>
-                    <a href="{{ path('chef_edit', {'id': chef.id}) }}">edit</a>
+                    <a href="{{ path('chef_show', {'id': chef.id}) }}">Voir</a>
+                    <a href="{{ path('chef_edit', {'id': chef.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="10">no records found</td>
+                <td colspan="10">Pas de chef enregistré</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('chef_new') }}">Create new</a>
+    <a href="{{ path('chef_new') }}">Ajouter un nouveau</a>
 {% endblock %}
