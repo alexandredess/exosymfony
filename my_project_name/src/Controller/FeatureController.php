@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class FeatureController extends AbstractController
 {
     /**
-     * @Route("/feature", name="feature")
+     * @Route("/admin/feature", name="feature")
      */
     public function index(): Response
     {
